@@ -12,7 +12,7 @@ const MotionBox = motion(Box);
 
 export default function Home() {
   return (
-    <Box bg="gray.900" color="gray.100" scrollBehavior="smooth">
+   <Box bg="gray.50" color="gray.800" scrollBehavior="smooth">
       {/* ===== NAVBAR ===== */}
       <Navbar />
 
