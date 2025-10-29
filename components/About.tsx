@@ -20,7 +20,7 @@ export default function About() {
           textAlign="center"
         >
           <Image
-            src="/vineet.jpg"
+            src="/vineet.png"
             alt="Vineet Chadalavada"
             borderRadius="2xl"
             boxShadow="lg"
