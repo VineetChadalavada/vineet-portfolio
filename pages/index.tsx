@@ -1,31 +1,15 @@
-import Home from 'components/home-page/home'
-import { GetStaticProps, NextPage } from 'next'
-import { BlogPostProps } from 'interfaces/interface'
-import PageLayout from 'components/layouts/pageLayout'
-import { getDevtoPosts } from 'lib/fetchPosts'
+import React from "react";
 
-const Index: NextPage<BlogPostProps> = (props) => {
-  const { posts } = props
+export default function Home() {
   return (
-    <PageLayout title="Muhammad Ahmad - Full Stack Developer">
-      <Home posts={posts} />
-    </PageLayout>
-  )
+    <main className="flex flex-col items-center justify-center min-h-screen p-8 text-center">
+      <h1 className="text-4xl font-bold mb-4">Vineet Chadalavada</h1>
+      <p className="text-lg max-w-2xl">
+        PhD Student • Hardware Security Researcher • FPGA Architect
+      </p>
+      <p className="mt-4 text-gray-600">
+        Explore my research, projects, and publications below.
+      </p>
+    </main>
+  );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getDevtoPosts()
-
-  if (!posts) {
-    return {
-      notFound: true,
-    }
-  }
-
-  return {
-    props: { posts },
-    revalidate: 1,
-  }
-}
-
-export default Index
