@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import Metrics from 'components/metrics';
+
 
 class MyDocument extends Document {
   render() {
