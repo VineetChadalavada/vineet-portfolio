@@ -30,7 +30,16 @@ export default function Contact() {
   };
 
   return (
-    <Box id="contact" py={24} px={6} bg="white" color="gray.800">
+    <MotionBox
+      id="contact"
+      bg="gray.900"
+      color="gray.100"
+      py={24}
+      px={6}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <VStack spacing={10} maxW="4xl" mx="auto" align="center">
         <Heading size="xl" color="orange.400">
           Contact Me
@@ -41,26 +50,29 @@ export default function Contact() {
             <Input
               placeholder="Your Name"
               name="name"
-              bg="gray.900"
+              bg="gray.800"
               borderColor="gray.700"
               _focus={{ borderColor: "orange.400" }}
+              color="gray.100"
               required
             />
             <Input
               type="email"
               placeholder="Your Email"
               name="email"
-              bg="gray.900"
+              bg="gray.800"
               borderColor="gray.700"
               _focus={{ borderColor: "orange.400" }}
+              color="gray.100"
               required
             />
             <Textarea
               placeholder="Your Message"
               name="message"
-              bg="gray.900"
+              bg="gray.800"
               borderColor="gray.700"
               _focus={{ borderColor: "orange.400" }}
+              color="gray.100"
               required
             />
             <Button
@@ -68,7 +80,7 @@ export default function Contact() {
               colorScheme="orange"
               size="lg"
               w="full"
-              _hover={{ transform: "scale(1.02)" }}
+              _hover={{ transform: "scale(1.03)" }}
             >
               Send Message
             </Button>
@@ -108,6 +120,6 @@ export default function Contact() {
           </Link>
         </HStack>
       </VStack>
-    </Box>
+    </MotionBox>
   );
 }
