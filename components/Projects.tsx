@@ -2,9 +2,8 @@ import {
   Box,
   Heading,
   Text,
-  VStack,
   SimpleGrid,
-  HStack,
+  VStack,
   Link,
   Tag,
 } from "@chakra-ui/react";
@@ -12,67 +11,84 @@ import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
 
-export default function Projects() {
-  const projects = [
-    {
-      title: "Trusted Memory Access Monitor (TMAM)",
-      desc: "Real-time FPGA IP block for detecting DDR4-based Prime+Probe side-channel attacks. Implemented monitoring of burst timing anomalies on Xilinx Alveo U250.",
-      tags: ["FPGA", "DDR4", "Security", "Vivado HLS"],
-      link: "https://github.com/VineetChadalavada",
-    },
-    {
-      title: "Prime+Probe Attack Framework on DDR4",
-      desc: "Developed an end-to-end Prime+Probe timing attack targeting DDR4 memory on FPGA clouds with countermeasures like Bank Isolation, Cache Buffer, and Noise Injection.",
-      tags: ["C++", "XRT", "Alveo U250", "Side-Channel"],
-      link: "https://vineetchadalavada.github.io",
-    },
-    {
-      title: "Machine Learning for Side-Channel Analysis",
-      desc: "Built CNN models for AES key recovery using power traces collected from FPGA boards and open datasets like ASCAD and SMAesH.",
-      tags: ["Python", "TensorFlow", "ChipWhisperer", "AES"],
-      link: "https://github.com/VineetChadalavada",
-    },
-  ];
+const projects = [
+  {
+    title: "Prime+Probe DDR4 Attack on FPGA Cloud",
+    desc: "Implemented a Prime+Probe timing attack targeting DDR4 memory on Xilinx Alveo U250. Built custom Prime, Probe, and AES victim kernels in HLS and C++, demonstrating DRAM timing leakage in multi-tenant FPGA systems.",
+    tags: ["FPGA", "DDR4", "Prime+Probe", "C++", "Vitis"],
+    link: "https://github.com/VineetChadalavada", // you can later link to your repo or paper
+  },
+  {
+    title: "Trusted Memory Access Monitor (TMAM)",
+    desc: "Developed a real-time TMAM IP module to detect DDR4-based Prime+Probe attacks in FPGA clouds. Designed monitoring logic for timing anomalies, burst patterns, and access correlations within shell-level infrastructure.",
+    tags: ["FPGA Security", "TMAM IP", "Verilog", "DDR4", "Detection"],
+    link: "https://github.com/VineetChadalavada",
+  },
+  {
+    title: "AES Side-Channel Analysis (SCA)",
+    desc: "Captured and analyzed power traces using ChipWhisperer for AES encryption. Built CNN and SVM models in TensorFlow/Keras to recover key bytes using SubBytes leakage models.",
+    tags: ["ChipWhisperer", "AES", "CNN", "TensorFlow", "SCA"],
+    link: "https://github.com/VineetChadalavada",
+  },
+  {
+    title: "Agro Drone for Precision Farming",
+    desc: "Designed an ARM Cortex-M4-based drone using ArduPilot for automated pesticide spraying and crop-health monitoring with ultrasonic sensors and IMU modules.",
+    tags: ["ARM Cortex-M4", "Embedded C", "ArduPilot", "Drone Tech"],
+    link: "https://github.com/VineetChadalavada",
+  },
+];
 
+export default function Projects() {
   return (
-    <Box id="projects" py={24} px={6} bg="gray.800" color="gray.100">
-      <VStack spacing={10} maxW="6xl" mx="auto" align="stretch">
-        <Heading size="xl" color="orange.400" textAlign="center">
+    <Box id="projects" py={24} px={6} bg="gray.900" color="gray.100">
+      <VStack spacing={10} maxW="6xl" mx="auto" align="start">
+        <Heading size="xl" color="orange.400">
           Projects
         </Heading>
 
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
-          {projects.map((proj, idx) => (
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="100%">
+          {projects.map((proj, i) => (
             <MotionBox
-              key={idx}
-              bg="gray.900"
+              key={i}
               p={6}
-              rounded="xl"
-              shadow="lg"
-              whileHover={{ y: -5 }}
+              bg="gray.800"
+              borderRadius="xl"
+              boxShadow="md"
+              whileHover={{ scale: 1.03, boxShadow: "0px 0px 15px #ff9400" }}
               transition={{ duration: 0.3 }}
             >
-              <Heading size="md" color="orange.300" mb={2}>
-                {proj.title}
-              </Heading>
-              <Text color="gray.300" mb={4}>
-                {proj.desc}
-              </Text>
-              <HStack wrap="wrap" mb={4}>
-                {proj.tags.map((tag, i) => (
-                  <Tag key={i} size="sm" colorScheme="orange">
-                    {tag}
-                  </Tag>
-                ))}
-              </HStack>
-              <Link
-                href={proj.link}
-                color="orange.400"
-                fontWeight="bold"
-                isExternal
-              >
-                View Project →
-              </Link>
+              <VStack align="start" spacing={4}>
+                <Heading size="md" color="orange.300">
+                  {proj.title}
+                </Heading>
+                <Text color="gray.300" fontSize="md">
+                  {proj.desc}
+                </Text>
+
+                <Box>
+                  {proj.tags.map((tag, j) => (
+                    <Tag
+                      key={j}
+                      mr={2}
+                      mb={2}
+                      colorScheme="orange"
+                      variant="subtle"
+                      fontWeight="medium"
+                    >
+                      {tag}
+                    </Tag>
+                  ))}
+                </Box>
+
+                <Link
+                  href={proj.link}
+                  color="orange.400"
+                  fontWeight="semibold"
+                  isExternal
+                >
+                  View Project ↗
+                </Link>
+              </VStack>
             </MotionBox>
           ))}
         </SimpleGrid>
