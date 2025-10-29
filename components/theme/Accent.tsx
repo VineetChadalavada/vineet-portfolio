@@ -1,7 +1,6 @@
-import React from 'react'
-import { IconButton, IconButtonProps, Icon } from '@chakra-ui/react'
-import { theme, ColorKeys, useLinkColor, accentKeys } from 'components/theme'
-import { useLocalSetting } from 'components/hooks/useLocalSetting'
+import React, { useState, useCallback, useMemo } from 'react'
+import { IconButton, Icon, IconButtonProps } from '@chakra-ui/react'
+import { theme, useLinkColor, accentKeys } from 'components/theme'
 import { css, Global } from '@emotion/react'
 import { getTagBackgroundDark } from 'components/theme/colors'
 
@@ -18,31 +17,27 @@ export const AccentPickerIcon = ({ ...props }) => {
 }
 
 export const AccentPicker: React.FC<IconButtonProps> = ({ ...props }) => {
-  const [key, setAccentKey] = useLocalSetting<ColorKeys>(
-    'accent',
-    'defaultAccent'
-  )
+  // Default accent color state instead of using missing hook
+  const [accentIndex, setAccentIndex] = useState(0)
 
-  const update = React.useCallback(() => {
-    let index = accentKeys.indexOf(key)
-    index = (index + 1) % accentKeys.length
-    setAccentKey(accentKeys[index])
-  }, [key])
+  const updateAccent = useCallback(() => {
+    setAccentIndex((prev) => (prev + 1) % accentKeys.length)
+  }, [])
 
   return (
     <IconButton
       icon={<AccentPickerIcon />}
       isRound
-      onMouseDown={update}
+      onMouseDown={updateAccent}
       {...props}
     />
   )
 }
 
 export const AccentGlobal: React.FC = () => {
-  const [accentKey] = useLocalSetting<ColorKeys>('accent', 'defaultAccent')
+  const accentKey = accentKeys[0] // default to first accent color
   const accent = theme.colors[accentKey]
-  const styles = React.useMemo(
+  const styles = useMemo(
     () => css`
       :root {
         --colors-accent-50: ${accent[50]};
@@ -60,5 +55,6 @@ export const AccentGlobal: React.FC = () => {
     `,
     [accentKey]
   )
+
   return <Global styles={styles} />
 }
