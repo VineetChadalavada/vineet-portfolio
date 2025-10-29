@@ -5,7 +5,7 @@ import { AnimateSharedLayout } from 'framer-motion'
 import { MotionBox } from '../shared/animations/motion'
 
 interface ProjectsProps {
-  projects: project[]
+  projects: any[]
 }
 
 const ORANGE = '#ff9400'
