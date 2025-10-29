@@ -1,4 +1,4 @@
-import { usePostData } from 'lib/usePostData';
+
 import React from 'react';
 import { MotionBox, MotionFlex } from './animations/motion';
 import { Icon, useColorModeValue, Spinner } from '@chakra-ui/react';
