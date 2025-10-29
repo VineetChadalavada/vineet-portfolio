@@ -1,234 +1,67 @@
-export const companies = [
-  {
-    title: 'Nalikes Studio',
-    alt: 'NS image',
-    role: 'Senior Software Engineer',
-    skills: ['web3', 'nextjs', 'rails', 'typescript', 'react', 'aws', 'heroku'],
-    period: '2023 - Present',
-    logo: '/assets/images/logos/nalikes-studio.png'
-  },
-  {
-    title: 'Big Wolf Games',
-    alt: 'BW image',
-    role: 'Senior Software Engineer',
-    skills: ['ruby', 'rails', 'typescript', 'react', 'pixi', 'aws', 'heroku', 'serverless'],
-    period: '2021 - 2023',
-    logo: '/assets/images/logos/bigwolf.png'
-  },
-  {
-    title: 'Phaedra Solutions',
-    alt: 'PS image',
-    role: 'Senior Software Engineer',
-    skills: ['ruby', 'rails', 'typescript', 'javascript', 'react', 'aws'],
-    period: '2019 - 2021',
-    logo: '/assets/images/logos/phaedra.jpeg'
-  },
-  {
-    title: 'Brainx Technologies',
-    alt: 'BT image',
-    role: 'Software Engineer',
-    skills: ['ruby', 'rails', 'javascript', 'python'],
-    period: '2018 - 2019',
-    logo: '/assets/images/logos/brainxtech.png'
-  },
-  // {
-  //   title: "Codenya Studio",
-  //   alt: "CS image",
-  //   role: "Co-founder, CTO",
-  //   skills: ["ruby", "rails", "python", "typescript", "react", "aws"],
-  //   period: "2018 - Present",
-  //   logo: '/assets/images/logos/codenya.png'
-  // },
-  {
-    title: 'Brainplow',
-    alt: 'Brainplow image',
-    role: 'Software Engineer',
-    skills: ['javascript', 'python', 'angular'],
-    period: '2017 - 2018',
-    logo: '/assets/images/logos/brainplow.jpg'
-  }
-];
-
-export const institutes = [
-  {
-    short_title: 'FAST - NUCES',
-    title: 'National University of Computer and Emerging Sciences',
-    alt: 'Nuces image',
-    role: "Bachelor's Degree in Computer Science",
-    skills: ['project management', 'web development', 'data structures'],
-    period: '2013 - 2017',
-    startingYear: '2013',
-    logo: '/assets/images/logos/fast.png',
-    awards: [
-      {
-        title: 'Speed Programming Battle',
-        description: 'Won speed programming battle which held at FAST - NUCES.',
-        date: 'May 1, 2015'
-      },
-      {
-        title: 'Silver Medal',
-        description:
-          'This medal was awarded to me by FAST - NUCES for getting a CGPA of 3.9 in 2nd semester.',
-        date: 'May 1, 2014'
-      },
-      {
-        title: 'Speed Programming Battle',
-        description: 'Won speed programming battle which held at FAST - NUCES.',
-        date: 'Nov 1, 2013'
-      }
-    ]
-  }
-];
-
-export const skillsArray = [
-  {
-    name: 'Ruby on Rails',
-    description: 'Web development',
-    link: 'https://rubyonrails.org/',
-    type: 'development',
-    image: '/assets/images/skills/rails.png'
-  },
-  {
-    name: 'Nextjs',
-    description: 'Web development',
-    link: 'https://nextjs.org/',
-    type: 'development',
-    image: '/assets/images/skills/nextjs.png'
-  },
-  {
-    name: 'React',
-    description: 'Web development',
-    link: 'https://reactjs.org/',
-    type: 'development',
-    image: '/assets/images/skills/react.png'
-  },
-  {
-    name: 'Ruby',
-    description: 'Web development, scrapping',
-    link: 'https://www.ruby-lang.org/en/',
-    type: 'development',
-    image: '/assets/images/skills/ruby.png'
-  },
-  {
-    name: 'Python',
-    description: 'Web development, scrapping',
-    link: 'https://www.python.org/',
-    type: 'development',
-    image: '/assets/images/skills/python.png'
-  },
-  {
-    name: 'Javascript',
-    description: 'Web development',
-    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-    type: 'development',
-    image: '/assets/images/skills/javascript.png'
-  },
-  {
-    name: 'Typescript',
-    description: 'Web development',
-    link: 'https://www.typescriptlang.org/',
-    type: 'development',
-    image: '/assets/images/skills/typescript.png'
-  },
-  {
-    name: 'Html5',
-    description: 'Web layouts',
-    link: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
-    type: 'development',
-    image: '/assets/images/skills/html-5.png'
-  },
-  {
-    name: 'Css3',
-    description: 'Web design',
-    link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-    type: 'design',
-    image: '/assets/images/skills/css3.png'
-  },
-  {
-    name: 'Bootstrap',
-    description: 'Web design',
-    link: 'https://getbootstrap.com/',
-    type: 'design',
-    image: '/assets/images/skills/bootstrap.png'
-  },
-  {
-    name: 'Postgres',
-    description: 'Database',
-    link: 'https://www.postgresql.org/',
-    type: 'database',
-    image: '/assets/images/skills/postgresql.png'
-  },
-  {
-    name: 'Mysql',
-    description: 'Database',
-    link: 'https://www.mysql.com/',
-    type: 'database',
-    image: '/assets/images/skills/mysql.png'
-  },
-  {
-    name: 'Redis',
-    description: 'Database',
-    link: 'https://redis.io/',
-    type: 'database',
-    image: '/assets/images/skills/redis.png'
-  },
-  {
-    name: 'Heroku',
-    description: 'Devops',
-    link: 'https://www.heroku.com/',
-    type: 'devops',
-    image: '/assets/images/skills/heroku.png'
-  },
-  {
-    name: 'AWS',
-    description: 'Devops',
-    link: 'https://aws.amazon.com/',
-    type: 'devops',
-    image: 'assets/images/skills/aws.png'
-  },
-  {
-    name: 'Digital Ocean',
-    description: 'Devops',
-    link: 'https://www.digitalocean.com/',
-    type: 'devops',
-    image: '/assets/images/skills/digital-ocean.png'
-  },
-  {
-    name: 'Nginx',
-    description: 'Web server',
-    link: 'https://www.nginx.com/',
-    type: 'devops',
-    image: '/assets/images/skills/nginx.png'
-  },
-  {
-    name: 'Visual Studio Code',
-    description: 'Code editor of choice',
-    link: 'https://code.visualstudio.com/',
-    type: 'development',
-    image: '/assets/images/skills/vscode.png'
-  },
-  {
-    name: 'Figma',
-    description: 'Collaborative Design',
-    link: 'https://www.figma.com/',
-    type: 'design',
-    image: '/assets/images/skills/figma.png'
-  }
-];
-
-export const newContent = [
-  {
-    link: '/blog/chakraui-templateskart-ui-updates',
-    text: 'ChakraUI TemplatesKart - UI updates',
-    showNewTag: false
-  },
-  {
-    link: '/blog/templateskart-free-chakra-ui-components-and-projects',
-    text: 'TemplatesKart | Free Chakra UI Components and Projects',
-    showNewTag: false
-  },
-  {
-    link: '/blog/started-2022-by-updating-portfolio-website-1jde-temp-slug-4553258',
-    text: 'Started 2022 by updating portfolio website'
-  }
-];
+export const personalData = {
+  name: "Vineet Chadalavada",
+  profile: "/vineet.jpg",
+  designation: "PhD Student | Researcher | Hardware Security Engineer",
+  description: `PhD candidate at UNC Charlotte focusing on FPGA-based hardware security, side-channel analysis, and secure reconfigurable architectures. Passionate about bridging hardware design and AI-driven reliability for embedded systems.`,
+  email: "chvineet10@gmail.com",
+  phone: "+1 (980) 371-5518",
+  address: "Charlotte, NC, USA",
+  github: "https://github.com/VineetChadalavada",
+  linkedin: "https://www.linkedin.com/in/vineet-chadalavada-651210193/",
+  resume: "/Resume.pdf", // upload your resume to the public folder
+  education: [
+    {
+      title: "PhD in Electrical and Computer Engineering",
+      institution: "University of North Carolina at Charlotte",
+      year: "2023 – 2026 (Expected)",
+    },
+    {
+      title: "MS in Computer Engineering",
+      institution: "University of North Carolina at Charlotte",
+      year: "2022 – 2023",
+    },
+    {
+      title: "BE in Electrical and Electronics Engineering",
+      institution: "Sathyabama Institute of Science and Technology, Chennai, India",
+      year: "2016 – 2020",
+    },
+  ],
+  experience: [
+    {
+      title: "Graduate Research Assistant",
+      company: "University of North Carolina at Charlotte",
+      year: "May 2024 – Aug 2024",
+      details: [
+        "Developed LSTM-based predictive models for SRAM degradation under voltage/temperature stress.",
+        "Improved RUL prediction accuracy by 96%, enabling efficient reliability assessments.",
+      ],
+    },
+    {
+      title: "Graduate Research Assistant",
+      company: "University of North Carolina at Charlotte",
+      year: "May 2023 – Aug 2023",
+      details: [
+        "Implemented RTL cryptographic accelerators on FPGA.",
+        "Automated SCA detection with ML-enhanced power trace analysis.",
+      ],
+    },
+    {
+      title: "Graduate Teaching Assistant",
+      company: "UNC Charlotte",
+      year: "Aug 2022 – Present",
+      details: [
+        "Guided students in RISC-V pipelined decoder projects and logic system design.",
+        "Evaluated coursework and led hardware architecture labs.",
+      ],
+    },
+    {
+      title: "SAP Associate Consultant",
+      company: "Unilever (PBS Biz Apps)",
+      year: "Jul 2020 – Aug 2021",
+      details: [
+        "Maintained SAP-RF device integration for supply chain automation.",
+        "Collaborated on change management and system optimization.",
+      ],
+    },
+  ],
+};
