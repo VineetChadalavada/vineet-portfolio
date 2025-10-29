@@ -1,12 +1,5 @@
-/**
- * LINKS and USERNAMES
- */
-export const GITHUB_API_URL = 'https://api.github.com';
-export const GITHUB_USERNAME = 'MA-Ahmad';
-export const GITHUB_REPO = 'myportfolio';
-export const DEVTO_API_URL = 'https://dev.to/api';
-
-/**
- * SEO constants
- */
-export const SEO_IMAGE = 'https://mahmad.me/logo.png';
+export const constants = {
+  siteTitle: "Vineet Chadalavada | Portfolio",
+  siteDescription: "PhD student and hardware security researcher at UNC Charlotte specializing in FPGA-based architectures, side-channel analysis, and secure embedded systems.",
+  copyright: "© 2025 Vineet Chadalavada. All Rights Reserved.",
+};
