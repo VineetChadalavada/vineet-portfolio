@@ -31,7 +31,7 @@ export default function Home() {
           Vineet Chadalavada
         </Heading>
         <Text fontSize="xl" mb={8}>
-          PhD Student • Hardware Security Researcher • FPGA Engineer
+           PhD Student • Hardware Security Researcher • RISC-V & FPGA Systems
         </Text>
 
         <HStack justify="center" spacing={6}>
