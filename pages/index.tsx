@@ -5,6 +5,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Projects from "../components/Projects";
+import Publications from "../components/Publications";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 
@@ -12,7 +13,7 @@ const MotionBox = motion(Box);
 
 export default function Home() {
   return (
-   <Box bg="gray.50" color="gray.800" scrollBehavior="smooth">
+    <Box bg="gray.50" color="gray.800" scrollBehavior="smooth">
       {/* ===== NAVBAR ===== */}
       <Navbar />
 
@@ -31,7 +32,7 @@ export default function Home() {
           Vineet Chadalavada
         </Heading>
         <Text fontSize="xl" mb={8}>
-           PhD Student • Hardware Security Researcher • RISC-V & FPGA Systems
+          PhD Student • Hardware Security Researcher • RISC-V & FPGA Systems
         </Text>
 
         <HStack justify="center" spacing={6}>
@@ -68,6 +69,10 @@ export default function Home() {
 
         <Box id="skills">
           <Skills />
+        </Box>
+
+        <Box id="publications">
+          <Publications />
         </Box>
 
         <Box id="contact">
