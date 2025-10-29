@@ -14,7 +14,7 @@ export default function About() {
         mx="auto"
         gap={10}
       >
-        {/* ==== FULL RECTANGULAR PHOTO ==== */}
+        {/* ==== FULL IMAGE WITHOUT BORDER ==== */}
         <MotionBox
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -23,12 +23,9 @@ export default function About() {
           <Image
             src="/vineet.png"
             alt="Vineet Chadalavada"
-            borderRadius="xl"
             boxSize={{ base: "300px", md: "400px" }}
-            objectFit="contain"       
-            border="3px solid #ff9400"
-            shadow="2xl"
-            bg="gray.800"             
+            objectFit="contain"
+            borderRadius="md"
           />
         </MotionBox>
 
