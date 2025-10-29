@@ -1,49 +1,63 @@
-import { Box, Text, VStack, Heading, HStack, Button, Link } from "@chakra-ui/react";
+import { Box, VStack, Heading, Text, Button, HStack, Link } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import About from "../components/About";
+import Projects from "../components/Projects";
+import Skills from "../components/Skills";
+import Contact from "../components/Contact";
+
+const MotionBox = motion(Box);
 
 export default function Home() {
   return (
-    <Box
-      minH="100vh"
-      bg="white"
-      color="gray.800"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      px={6}
-    >
-      <VStack spacing={6} textAlign="center" maxW="3xl">
-        <Heading as="h1" size="2xl" fontWeight="bold">
+    <Box bg="gray.900" color="gray.100">
+      {/* ===== HERO SECTION ===== */}
+      <MotionBox
+        as="header"
+        textAlign="center"
+        py={32}
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Heading size="2xl" color="orange.400" mb={4}>
           Vineet Chadalavada
         </Heading>
-
-        <Text fontSize="xl" fontWeight="semibold" color="gray.600">
-          PhD Student • Hardware Security Researcher • FPGA Architect
+        <Text fontSize="xl" mb={8}>
+          PhD Student • Hardware Security Researcher • FPGA Engineer
         </Text>
 
-        <Text fontSize="lg" color="gray.500" lineHeight="tall">
-          Exploring FPGA-based side-channel attacks, DDR4 timing analysis, and secure
-          reconfigurable architectures in cloud environments.
-        </Text>
-
-        <HStack spacing={4} pt={4}>
-          <Link href="/about" _hover={{ textDecoration: "none" }}>
-            <Button colorScheme="orange" variant="solid">
-              About
+        <HStack justify="center" spacing={6}>
+          <Link href="mailto:chvineet10@gmail.com" isExternal>
+            <Button leftIcon={<FaEnvelope />} colorScheme="orange" variant="solid">
+              Email
             </Button>
           </Link>
-          <Link href="/projects" _hover={{ textDecoration: "none" }}>
-            <Button colorScheme="orange" variant="outline">
-              Projects
+          <Link href="https://www.linkedin.com/in/vineet-chadalavada-651210193/" isExternal>
+            <Button leftIcon={<FaLinkedin />} colorScheme="orange" variant="outline">
+              LinkedIn
             </Button>
           </Link>
-          <Link href="/contact" _hover={{ textDecoration: "none" }}>
-            <Button colorScheme="orange" variant="outline">
-              Contact
+          <Link href="https://github.com/VineetChadalavada" isExternal>
+            <Button leftIcon={<FaGithub />} colorScheme="orange" variant="outline">
+              GitHub
             </Button>
           </Link>
         </HStack>
+      </MotionBox>
+
+      {/* ===== CONTENT SECTIONS ===== */}
+      <VStack spacing={0} align="stretch">
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
       </VStack>
+
+      {/* ===== FOOTER ===== */}
+      <Box py={8} textAlign="center" bg="gray.800" color="gray.400" fontSize="sm">
+        © {new Date().getFullYear()} Vineet Chadalavada | Built with Next.js + Chakra UI ❤️
+      </Box>
     </Box>
   );
 }
