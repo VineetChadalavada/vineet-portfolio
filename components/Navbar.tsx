@@ -6,8 +6,9 @@ const MotionBox = motion(Box);
 const sections = ["home", "about", "projects", "contact"];
 
 export default function Navbar() {
-  const bg = useColorModeValue("rgba(255,255,255,0.1)", "rgba(26, 26, 26, 0.9)");
-  const color = useColorModeValue("gray.800", "gray.100");
+ const bg = useColorModeValue("whiteAlpha.900", "rgba(26, 26, 26, 0.9)");
+ const color = useColorModeValue("gray.800", "gray.100");
+
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
