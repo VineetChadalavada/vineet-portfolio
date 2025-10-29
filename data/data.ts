@@ -1,6 +1,6 @@
 export const personalData = {
   name: "Vineet Chadalavada",
-  profile: "/vineet.jpg",
+  profile: "/vineet.png",
   designation: "PhD Student | Researcher | Hardware Security Engineer",
   description: `PhD candidate at UNC Charlotte focusing on FPGA-based hardware security, side-channel analysis, and secure reconfigurable architectures. Passionate about bridging hardware design and AI-driven reliability for embedded systems.`,
   email: "chvineet10@gmail.com",
