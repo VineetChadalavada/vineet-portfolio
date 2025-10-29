@@ -30,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <Box id="contact" py={24} px={6} bg="gray.800" color="gray.100">
+    <Box id="contact" py={24} px={6} bg="white" color="gray.800">
       <VStack spacing={10} maxW="4xl" mx="auto" align="center">
         <Heading size="xl" color="orange.400">
           Contact Me
