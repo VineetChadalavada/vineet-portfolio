@@ -13,21 +13,39 @@ const MotionBox = motion(Box);
 
 const projects = [
   {
-    title: "FPGA-Based Side-Channel Attack Framework",
-    description:
-      "Developed a complete side-channel analysis framework using ChipWhisperer and Alveo U250 to analyze AES encryption power traces and evaluate hardware countermeasures.",
-    link: "https://github.com/VineetChadalavada",
-  },
-  {
     title: "Prime+Probe DDR4 Timing Attack on FPGA Cloud",
     description:
-      "Implemented Prime+Probe-style timing attacks targeting DDR4 memory in multi-tenant FPGA environments using Xilinx Alveo U250 and Vitis HLS.",
+      "Implemented a Prime+Probe-style timing attack targeting DDR4 memory subsystems in multi-tenant FPGA cloud platforms using Xilinx Alveo U250. Analyzed inter-bank interference and row buffer timing variations to infer co-tenant activity.",
     link: "https://github.com/VineetChadalavada",
   },
   {
     title: "Trusted Memory Access Monitor (TMAM)",
     description:
-      "Designed a real-time detection IP to monitor DDR4-based Prime+Probe attack patterns and enforce memory access integrity in FPGA cloud platforms.",
+      "Designed and validated a real-time hardware IP to detect and mitigate DDR4-based Prime+Probe attacks on FPGA cloud systems. TMAM monitors memory access patterns to flag abnormal timing bursts, providing active runtime defense.",
+    link: "https://github.com/VineetChadalavada",
+  },
+  {
+    title: "Machine Learning-Based Side-Channel Analysis (ML-SCA)",
+    description:
+      "Developed CNN and attention-based models for AES sub-byte prediction using power traces collected from FPGA targets. Evaluated leakage correlation, feature extraction, and countermeasure robustness across multiple datasets.",
+    link: "https://github.com/VineetChadalavada",
+  },
+  {
+    title: "Secure Cache and Memory Architecture for RISC-V",
+    description:
+      "Proposed a secure cache hierarchy for RISC-V processors integrating speculation-leakage-free buffers and cache partitioning. Simulated using gem5 to assess defense efficiency and performance overheads.",
+    link: "https://github.com/VineetChadalavada",
+  },
+  {
+    title: "Dynamic Partial Reconfiguration for FPGA Security",
+    description:
+      "Explored dynamic partial reconfiguration as a countermeasure to side-channel and timing-based attacks. Developed partial bitstream management and runtime switching mechanisms on Xilinx FPGA boards.",
+    link: "https://github.com/VineetChadalavada",
+  },
+  {
+    title: "FPGA-Based Side-Channel Attack Testbed",
+    description:
+      "Built a complete trace capture and analysis setup using ChipWhisperer and custom VHDL AES cores. Automated plaintext generation, trace synchronization, and leakage modeling to benchmark different key extraction techniques.",
     link: "https://github.com/VineetChadalavada",
   },
 ];
@@ -40,9 +58,8 @@ export default function Projects() {
           Projects
         </Heading>
         <Text fontSize="lg" color="gray.600" maxW="2xl">
-          A few research and engineering projects I’ve worked on in FPGA
-          hardware security, side-channel analysis, and cloud-based
-          reconfigurable systems.
+          A selection of research and engineering projects focused on hardware
+          security, side-channel analysis, and secure FPGA-based architectures.
         </Text>
 
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} mt={8}>
@@ -54,7 +71,7 @@ export default function Projects() {
               borderRadius="xl"
               bg="gray.50"
               transition="transform 0.25s ease"
-              _hover={{ transform: "scale(1.05)" }} // 👈 smooth scale only
+              _hover={{ transform: "scale(1.05)" }}
               whileHover={{ y: -4 }}
             >
               <Heading size="md" mb={3} color="orange.400">
