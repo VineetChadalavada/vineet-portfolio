@@ -65,3 +65,6 @@ export const personalData = {
     },
   ],
 };
+
+export const newContent = [];
+
