@@ -17,27 +17,35 @@ export default function Home() {
       {/* ===== NAVBAR ===== */}
       <Navbar />
 
-      {/* ===== HERO SECTION ===== */}
+      {/* ===== HERO SECTION (LIGHT) ===== */}
       <MotionBox
         as="header"
         id="home"
         textAlign="center"
         py={40}
         px={6}
+        bg="gray.50"
+        color="gray.800"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <Heading size="2xl" color="orange.400" mb={4}>
+        <Heading size="2xl" color="orange.500" mb={4}>
           Vineet Chadalavada
         </Heading>
-        <Text fontSize="xl" mb={8}>
+        <Text fontSize="xl" mb={8} fontWeight="medium">
           PhD Student • Hardware Security Researcher • RISC-V & FPGA Systems
         </Text>
 
         <HStack justify="center" spacing={6}>
           <Link href="mailto:chvineet10@gmail.com" isExternal>
-            <Button leftIcon={<FaEnvelope />} colorScheme="orange" variant="solid">
+            <Button
+              leftIcon={<FaEnvelope />}
+              colorScheme="orange"
+              variant="solid"
+              size="lg"
+              _hover={{ transform: "scale(1.05)" }}
+            >
               Email
             </Button>
           </Link>
@@ -45,12 +53,24 @@ export default function Home() {
             href="https://www.linkedin.com/in/vineet-chadalavada-651210193/"
             isExternal
           >
-            <Button leftIcon={<FaLinkedin />} colorScheme="orange" variant="outline">
+            <Button
+              leftIcon={<FaLinkedin />}
+              colorScheme="orange"
+              variant="outline"
+              size="lg"
+              _hover={{ transform: "scale(1.05)", bg: "orange.50" }}
+            >
               LinkedIn
             </Button>
           </Link>
           <Link href="https://github.com/VineetChadalavada" isExternal>
-            <Button leftIcon={<FaGithub />} colorScheme="orange" variant="outline">
+            <Button
+              leftIcon={<FaGithub />}
+              colorScheme="orange"
+              variant="outline"
+              size="lg"
+              _hover={{ transform: "scale(1.05)", bg: "orange.50" }}
+            >
               GitHub
             </Button>
           </Link>
@@ -71,12 +91,11 @@ export default function Home() {
           <Skills />
         </Box>
 
-        {/* ===== PUBLICATIONS (light) ===== */}
         <Box id="publications">
           <Publications />
         </Box>
 
-        {/* ===== CONTACT (dark) ===== */}
+        {/* ===== CONTACT (DARK) ===== */}
         <Box id="contact">
           <Contact />
         </Box>
