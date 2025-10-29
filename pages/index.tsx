@@ -1,6 +1,8 @@
 import { Box, VStack, Heading, Text, Button, HStack, Link } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+
+import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
@@ -10,12 +12,17 @@ const MotionBox = motion(Box);
 
 export default function Home() {
   return (
-    <Box bg="gray.900" color="gray.100">
+    <Box bg="gray.900" color="gray.100" scrollBehavior="smooth">
+      {/* ===== NAVBAR ===== */}
+      <Navbar />
+
       {/* ===== HERO SECTION ===== */}
       <MotionBox
         as="header"
+        id="home"
         textAlign="center"
-        py={32}
+        py={40}
+        px={6}
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -33,7 +40,10 @@ export default function Home() {
               Email
             </Button>
           </Link>
-          <Link href="https://www.linkedin.com/in/vineet-chadalavada-651210193/" isExternal>
+          <Link
+            href="https://www.linkedin.com/in/vineet-chadalavada-651210193/"
+            isExternal
+          >
             <Button leftIcon={<FaLinkedin />} colorScheme="orange" variant="outline">
               LinkedIn
             </Button>
@@ -48,10 +58,21 @@ export default function Home() {
 
       {/* ===== CONTENT SECTIONS ===== */}
       <VStack spacing={0} align="stretch">
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+        <Box id="about">
+          <About />
+        </Box>
+
+        <Box id="projects">
+          <Projects />
+        </Box>
+
+        <Box id="skills">
+          <Skills />
+        </Box>
+
+        <Box id="contact">
+          <Contact />
+        </Box>
       </VStack>
 
       {/* ===== FOOTER ===== */}
