@@ -5,7 +5,7 @@ import {
   SimpleGrid,
   VStack,
   Link,
-  Tag,
+  Button,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -13,82 +13,66 @@ const MotionBox = motion(Box);
 
 const projects = [
   {
-    title: "Prime+Probe DDR4 Attack on FPGA Cloud",
-    desc: "Implemented a Prime+Probe timing attack targeting DDR4 memory on Xilinx Alveo U250. Built custom Prime, Probe, and AES victim kernels in HLS and C++, demonstrating DRAM timing leakage in multi-tenant FPGA systems.",
-    tags: ["FPGA", "DDR4", "Prime+Probe", "C++", "Vitis"],
-    link: "https://github.com/VineetChadalavada", // you can later link to your repo or paper
+    title: "FPGA-Based Side-Channel Attack Framework",
+    description:
+      "Developed a complete side-channel analysis framework using ChipWhisperer and Alveo U250 to analyze AES encryption power traces and evaluate hardware countermeasures.",
+    link: "https://github.com/VineetChadalavada",
+  },
+  {
+    title: "Prime+Probe DDR4 Timing Attack on FPGA Cloud",
+    description:
+      "Implemented Prime+Probe-style timing attacks targeting DDR4 memory in multi-tenant FPGA environments using Xilinx Alveo U250 and Vitis HLS.",
+    link: "https://github.com/VineetChadalavada",
   },
   {
     title: "Trusted Memory Access Monitor (TMAM)",
-    desc: "Developed a real-time TMAM IP module to detect DDR4-based Prime+Probe attacks in FPGA clouds. Designed monitoring logic for timing anomalies, burst patterns, and access correlations within shell-level infrastructure.",
-    tags: ["FPGA Security", "TMAM IP", "Verilog", "DDR4", "Detection"],
-    link: "https://github.com/VineetChadalavada",
-  },
-  {
-    title: "AES Side-Channel Analysis (SCA)",
-    desc: "Captured and analyzed power traces using ChipWhisperer for AES encryption. Built CNN and SVM models in TensorFlow/Keras to recover key bytes using SubBytes leakage models.",
-    tags: ["ChipWhisperer", "AES", "CNN", "TensorFlow", "SCA"],
-    link: "https://github.com/VineetChadalavada",
-  },
-  {
-    title: "Agro Drone for Precision Farming",
-    desc: "Designed an ARM Cortex-M4-based drone using ArduPilot for automated pesticide spraying and crop-health monitoring with ultrasonic sensors and IMU modules.",
-    tags: ["ARM Cortex-M4", "Embedded C", "ArduPilot", "Drone Tech"],
+    description:
+      "Designed a real-time detection IP to monitor DDR4-based Prime+Probe attack patterns and enforce memory access integrity in FPGA cloud platforms.",
     link: "https://github.com/VineetChadalavada",
   },
 ];
 
 export default function Projects() {
   return (
-    <Box id="projects" py={24} px={6} bg="gray.900" color="gray.100">
-      <VStack spacing={10} maxW="6xl" mx="auto" align="start">
+    <Box id="projects" py={24} px={6} bg="white" color="gray.800">
+      <VStack spacing={10} maxW="6xl" mx="auto" textAlign="center">
         <Heading size="xl" color="orange.400">
           Projects
         </Heading>
+        <Text fontSize="lg" color="gray.600" maxW="2xl">
+          A few research and engineering projects I’ve worked on in FPGA
+          hardware security, side-channel analysis, and cloud-based
+          reconfigurable systems.
+        </Text>
 
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="100%">
-          {projects.map((proj, i) => (
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} mt={8}>
+          {projects.map((project, index) => (
             <MotionBox
-              key={i}
+              key={index}
               p={6}
-              bg="gray.800"
+              borderWidth="1px"
               borderRadius="xl"
-              boxShadow="md"
-              whileHover={{ scale: 1.03, boxShadow: "0px 0px 15px #ff9400" }}
-              transition={{ duration: 0.3 }}
+              bg="gray.50"
+              transition="transform 0.25s ease"
+              _hover={{ transform: "scale(1.05)" }} // 👈 smooth scale only
+              whileHover={{ y: -4 }}
             >
-              <VStack align="start" spacing={4}>
-                <Heading size="md" color="orange.300">
-                  {proj.title}
-                </Heading>
-                <Text color="gray.300" fontSize="md">
-                  {proj.desc}
-                </Text>
-
-                <Box>
-                  {proj.tags.map((tag, j) => (
-                    <Tag
-                      key={j}
-                      mr={2}
-                      mb={2}
-                      colorScheme="orange"
-                      variant="subtle"
-                      fontWeight="medium"
-                    >
-                      {tag}
-                    </Tag>
-                  ))}
-                </Box>
-
-                <Link
-                  href={proj.link}
-                  color="orange.400"
-                  fontWeight="semibold"
-                  isExternal
+              <Heading size="md" mb={3} color="orange.400">
+                {project.title}
+              </Heading>
+              <Text mb={4} color="gray.700">
+                {project.description}
+              </Text>
+              <Link href={project.link} isExternal>
+                <Button
+                  colorScheme="orange"
+                  variant="outline"
+                  size="sm"
+                  _hover={{ bg: "orange.400", color: "white" }}
                 >
-                  View Project ↗
-                </Link>
-              </VStack>
+                  View Project
+                </Button>
+              </Link>
             </MotionBox>
           ))}
         </SimpleGrid>
