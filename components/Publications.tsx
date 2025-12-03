@@ -29,12 +29,7 @@ export default function Publications() {
               accepted at <b>PAINE 2025</b>.
             </ListItem>
 
-            <ListItem>
-              <b>V. Chadalavada</b>, F. Saqib,{" "}
-              “<i>Inferring Tenant Workloads in FPGA Clouds through DRAM Timing Signatures</i>,”
-              accepted at <b>HONET 2025</b>.
-            </ListItem>
-
+      
             <ListItem>
               <b>V. Chadalavada</b>, N. Lodge, D. Aklekar, F. Saqib,{" "}
               “<i>Timing-Based Side-Channel Attack on DDR4 Memory in FPGA Cloud Environments</i>.”
