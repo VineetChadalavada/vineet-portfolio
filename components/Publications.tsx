@@ -19,19 +19,48 @@ export default function Publications() {
           </Heading>
 
           <Text fontSize="lg" color="gray.600">
-            Recent peer-reviewed papers and accepted works:
+            Peer-reviewed papers and accepted research works:
           </Text>
 
           <List spacing={5} fontSize="md">
+
             <ListItem>
-              <b>V. Chadalavada</b>, F. Saqib, “<i>Side-Channel Attacks in FPGA-Based Cloud
-              Environments: Evaluating Prime+Probe Attacks</i>,” accepted at <b>PAINE 2025</b>.
+              <b>V. Chadalavada</b>, F. Saqib, 
+              “<i>Side-Channel Attacks in FPGA-Based Cloud Environments: Evaluating Prime+Probe Attacks</i>,” 
+              accepted at <b>PAINE 2025</b>.
             </ListItem>
 
             <ListItem>
-              <b>V. Chadalavada</b>, F. Saqib, “<i>Inferring Tenant Workloads in FPGA Clouds
-              through DRAM Timing Signatures</i>,” accepted at <b>HONET 2025</b>.
+              <b>V. Chadalavada</b>, F. Saqib,
+              “<i>Inferring Tenant Workloads in FPGA Clouds through DRAM Timing Signatures</i>,” 
+              accepted at <b>HONET 2025</b>.
             </ListItem>
+
+            <ListItem>
+              <b>V. Chadalavada</b>,
+              “<i>Timing-Based Side-Channel Attack on DDR4 Memory in FPGA Cloud Environments</i>.”
+            </ListItem>
+
+            <ListItem>
+              <b>V. Chadalavada</b>,
+              “<i>Multi-Granular Information Flow Tracking in RISC-V based SoCs</i>.”
+            </ListItem>
+
+            <ListItem>
+              <b>V. Chadalavada</b>,
+              “<i>Gate-Level Information Flow Tracking for Securing 3PIPs</i>.”
+            </ListItem>
+
+            <ListItem>
+              <b>V. Chadalavada</b>,
+              “<i>Implementation of Machine Learning-Based Dynamic Logic Locking</i>.”
+            </ListItem>
+
+            <ListItem>
+              <b>V. Chadalavada</b>,
+              “<i>Design and Development of a Hexacopter for Fertilizer Spraying in Agricultural Fields</i>.”
+            </ListItem>
+
           </List>
 
           <Text fontSize="sm" color="gray.500" pt={6}>
