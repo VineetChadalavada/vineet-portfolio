@@ -41,26 +41,25 @@ export default function About() {
               About Me
             </Heading>
             <Text fontSize="lg" lineHeight="1.8">
-              I’m a PhD student in Electrical and Computer Engineering at UNC Charlotte,
-              where I conduct research in the <b>HEADS Lab</b> under the guidance of{" "}
-              <b>Dr. Fareena Saqib</b>. My work focuses on advancing hardware security
-              for reconfigurable computing systems, with an emphasis on analyzing
-              microarchitectural behavior and side-channel vulnerabilities in FPGA-based
-              cloud platforms.
+              I am a PhD student in Electrical and Computer Engineering at UNC Charlotte,
+              working in the <b>HEADS Lab</b> under <b>Dr. Fareena Saqib</b>. My research focuses on
+              hardware security for reconfigurable computing systems, with an emphasis on
+              <b>FPGA-based side-channel attacks, memory-system security, and cloud FPGA isolation</b>.
+            </Text>
+            
+            <Text fontSize="lg" lineHeight="1.8">
+              My work spans <b>DDR4 timing side channels, Prime+Probe attacks on FPGA platforms,
+              runtime memory-access monitoring (TMAM),</b> and the design of hardware-level
+              defenses for multi-tenant cloud environments. I have hands-on experience with the
+              <b>Xilinx Alveo U250</b>, Vitis/Vivado kernel development, HLS, RTL design, DRAM
+              timing characterization, and microarchitectural attack construction.
             </Text>
             <Text fontSize="lg" lineHeight="1.8">
-              My current research explores secure cache and memory architectures for{" "}
-              <b>RISC-V processors</b>. I study vulnerabilities introduced by speculative
-              execution and side-channel leakage, and develop hardware-level
-              countermeasures that include speculation-leakage-free buffers, cache
-              partitioning strategies, and real-world validation using both{" "}
-              <b>gem5</b> simulations and <b>FPGA-based testing</b>.
-            </Text>
-            <Text fontSize="lg" lineHeight="1.8">
-              Beyond research, I’m passionate about bridging hardware design, computer
-              architecture, and security. My goal is to contribute to the development of
-              resilient, high-performance, and trustworthy computing systems for
-              next-generation processors.
+              Beyond FPGA cloud security, I also work on <b>RISC-V microarchitectural protection</b>,
+              including information-flow tracking (ISA-IFT/GLIFT), cache and memory isolation,
+              and attack-resilient hardware design. My research goal is to develop practical,
+              deployable countermeasures that strengthen the reliability, privacy, and
+              trustworthiness of next-generation computing systems.
             </Text>
           </VStack>
         </MotionBox>
