@@ -7,7 +7,7 @@ export const BentoGrid = ({ children }: { children: React.ReactNode }) => {
       templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
       autoRows="minmax(140px, auto)"
       gap={4}
-      maxW="1100px"
+      maxW="1200px"
       mx="auto"
       p={4}
     >
@@ -28,7 +28,7 @@ export const BentoCard = ({ colSpan = 1, rowSpan = 1, title, children, href }: B
   const content = (
     <Box
       h="100%"
-      bg="gray.800"
+      bg="gray.900"
       border="1px solid"
       borderColor="whiteAlpha.200"
       borderRadius="2xl"
