@@ -2,7 +2,7 @@ import { Box, Text, Heading, VStack, Flex, Avatar, Tag, Icon, Link, ChakraProvid
 import { BentoGrid, BentoCard } from '../components/BentoGrid';
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileDownload, FaGraduationCap, FaMicrochip, FaShieldAlt, FaServer, FaBook, FaBriefcase, FaAward } from 'react-icons/fa';
 
-// 1. Force Dark Mode Theme
+// Force Dark Mode Theme
 const theme = extendTheme({
   config: { initialColorMode: 'dark', useSystemColorMode: false },
   styles: { global: { body: { bg: '#09090b', color: 'gray.100' } } }
