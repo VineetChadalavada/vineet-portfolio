@@ -1,32 +1,13 @@
-import { ChakraProvider, Box } from '@chakra-ui/react'
-import { AnimatePresence } from 'framer-motion'
-import { useRouter } from 'next/router'
-import { theme } from 'components/theme'
-import { AccentGlobal } from 'components/theme/Accent'
-import { FontsGlobal } from 'components/theme/fonts'
-import { PrismGlobal } from 'components/theme/prism'
-import { Analytics } from '@vercel/analytics/react'
+import { ChakraProvider } from '@chakra-ui/react';
+import type { AppProps } from 'next/app';
+import theme from '../configs/theme'; // Check this path matches your theme file
 
-function MyApp({ Component, pageProps }) {
-  const router = useRouter()
-
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme} resetCSS={true}>
-      <FontsGlobal />
-      <AccentGlobal />
-      <PrismGlobal />
-      <Analytics />
-      <AnimatePresence
-        mode="wait"
-        initial={false}
-        onExitComplete={() => window.scrollTo(0, 0)}
-      >
-        <Box key={router.route}>
-          <Component {...pageProps} />
-        </Box>
-      </AnimatePresence>
+    <ChakraProvider theme={theme}>
+      <Component {...pageProps} />
     </ChakraProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
